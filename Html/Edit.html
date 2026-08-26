@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit</title>
 </head>
 <body>
+    <h1>Edit</h1>
+    <form action="/edit" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend><h2>Personal Info</h2></legend>
+            <label for="name"><b>Name</b></label>
+            <input id ="name" type="text" placeholder="Name" required minlength="3">
+            <br>
+            <br>
+            <label for="email"><b>Eamil</b></label>
+            <input id="email" type="email" placeholder="Email">
+            <br><br>
+            <label for="phone"><b>Phone no.</b></label>
+            <input id="phone" type="number" placeholder="91+" pattern="[0-9]{10}">
+            <br><br>
+            <label for="age"><b>Age</b></label>
+            <input id="age" type="number" placeholder="Age" pattern="[18-99]{2}">
+            <br><br>
+             <b>Gender : </b>
+            <input id="m" type="radio" value="male" >
+            <label for="m"><b>Male</b></label>
+            <input id="f" type="radio" value="female">
+            <label for="f"><b>Female</b></label>
+        </fieldset>
+        <fieldset>
+            <legend><h2>Loaction</h2></legend>
+            <label for="city"><b>City</b></label>
+            <input id="city" type="text" >
+            <br><br>
+            <label for="state"><b>State</b></label>
+            <select name="state" id="state" required >
+            <option value="">--Select--</option>
+            <option value="solid">Solid</option>
+            <option value="liquid">Liquid</option>
+            <option value="Gas">Gas</option>
+            </select>
+            <br><br>
+            <label for="current"><b>Current Status</b></label>
+            <select name="current" id="current">
+                <option value="">--Select--</option>
+                <option value="pre">pre 1st year</option>
+                <option value="1st">1st year</option>
+                <option value="2nd">2nd year</option>
+                <option value="3rd">3rd year</option>
+                <option value="4th">4th year</option>
+            </select>
+         </fieldset>
+         <br>
+        Photo
+        <input type="file" id="photo" name="photo" accept=".jpg">
+        <br><br>
+        <button type="reset">Reset</button>
+        <br><br><br><br>
+        <input type="checkbox" id ="sure" name="sure" value="accepted" required >
+        <label for="sure">Are you sure you want to make the changes</label>
+        <button type="submit">Submit</button>
+        
+        
+    </form>
     
 </body>
 </html>
